@@ -1,0 +1,156 @@
+/* ============================= */
+/* Estilo base - Mobile First    */
+/* ============================= */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 360px; /* Limite para celular */
+}
+
+h1 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column; /* Mobile: coluna */
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+form input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+form button {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+li span {
+  margin-left: 8px;
+}
+
+li .completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+button.remove-btn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  cursor: pointer;
+}
+
+button.remove-btn:hover {
+  color: #cc0000;
+}
+
+.filtro-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filtro-container button {
+  padding: 5px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.filtro-container button.active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* ============================= */
+/* Tablets e desktops - Media Queries */
+/* ============================= */
+
+/* Tablets (min-width: 600px) */
+@media screen and (min-width: 600px) {
+  form {
+    flex-direction: row; /* Inputs lado a lado */
+  }
+
+  form input {
+    flex: 1;
+  }
+
+  .card {
+    padding: 30px;
+  }
+}
+
+/* Desktops (min-width: 900px) */
+@media screen and (min-width: 900px) {
+  .app-container {
+    padding: 40px;
+  }
+
+  .card {
+    max-width: 500px; /* mais largo para desktop */
+  }
+
+  form input, form button {
+    font-size: 18px;
+    padding: 12px;
+  }
+
+  li {
+    padding: 12px;
+  }
+}
